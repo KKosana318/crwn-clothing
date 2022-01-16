@@ -14,8 +14,6 @@ const SignIn = () => {
     const handleSubmit = async event => {
         event.preventDefault();
 
-        const {email, password} = this.state;
-
         try {
             await auth.signInWithEmailAndPassword(email, password);
             setEmail('');
@@ -48,7 +46,7 @@ const SignIn = () => {
                 <FormInput name="password" type="password" value={password} label="Password" handleChange={handleChange} required />
                 <div className="buttons">
                     <CustomButton type="submit" onClick={handleSubmit}>Sign In</CustomButton>
-                    <CustomButton onClick={SignInWithGoogle} isGoogleSignIn>Sign In With Google</CustomButton>
+                    <CustomButton type='button' onClick={SignInWithGoogle} isGoogleSignIn>Sign In With Google</CustomButton>
                 </div>
             </form>
         </div>
