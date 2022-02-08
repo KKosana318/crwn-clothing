@@ -5,7 +5,7 @@ import './menu-item.styles.scss';
 
 
 const MenuItem = ({title, imageUrl, size, history, linkUrl, match}) => {
-let navigate = useNavigate();
+    let navigate = useNavigate();
 
     return (
         <div className={`${size} menu-item`} onClick={() => navigate(`${linkUrl}`)}>

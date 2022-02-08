@@ -5,7 +5,7 @@ import SHOP_DATA from './shop.data.js';
 import CollectionPreview from '../../components/collection-preview/collection-preview.component.js';
 
 const ShopPage = () => {
-    const [shopData, setShopData] = useState(SHOP_DATA);
+    const [shopData] = useState(SHOP_DATA);
 
 
     return(
