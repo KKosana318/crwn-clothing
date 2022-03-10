@@ -3,8 +3,6 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './App.css';
-
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop-page/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
@@ -14,6 +12,8 @@ import Header from './components/header/header.component.jsx';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selectors';
+
+import './App.css';
 
 class App extends React.Component {
   
@@ -48,13 +48,13 @@ class App extends React.Component {
         <div>
           <Header />
           <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/shop' element={<ShopPage />} />
-            <Route path='/checkout' element={<CheckoutPage />} />
+            <Route index element={<HomePage />} />
+            <Route path='shop/*' element={<ShopPage />} />
+            <Route path='checkout' element={<CheckoutPage />} />
             {this.props.current ? 
-                <Route path='/signin' element={<Navigate replace to="/" />} />
+                <Route path='signin' element={<Navigate replace to="/" />} />
                 :
-                <Route path='/signin' element={<SignInAndSignUpPage />} />
+                <Route path='signin' element={<SignInAndSignUpPage />} />
             }
           </Routes>
         </div>

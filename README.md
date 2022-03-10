@@ -1,7 +1,7 @@
 ## Getting started
 To get started, run the following commands in the terminal of the project directory:
 
-npm install firebase react-dom redux-logger redux-persist redux sass
+npm install firebase react-dom react-router-dom redux-logger redux-persist redux sass
 
 npm start
 
