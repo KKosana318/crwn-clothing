@@ -6,7 +6,7 @@ npm install firebase react-dom redux-logger redux-persist redux sass
 npm start
 
 ## Project Description
-This project is an e-commerce platform called crwn-clothing that allows users to purchase a variety of clothing items. 
+crwn-clothing is a fully functional e-commerce website that allows users to purchase a variety of clothing items. 
 
 #### Features:
 - Users can add items to a cart that updates in realtime
