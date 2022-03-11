@@ -19,7 +19,10 @@ const SignIn = () => {
             setEmail('');
             setPassword('');
         } catch(error) {
-            console.error(error);
+            const errorString = error.toString() 
+            const alertMessage = errorString.substring(15, errorString.indexOf(".") + 1)
+            console.error(alertMessage)
+            alert(alertMessage)
         }
 
         

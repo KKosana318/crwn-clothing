@@ -29,6 +29,7 @@ class SignUp extends React.Component {
         }
 
         try {
+            console.log("submitted")
             const {user} = await auth.createUserWithEmailAndPassword(email, password);
             await createUserProfileDocument(user, {displayName});
 
@@ -39,7 +40,10 @@ class SignUp extends React.Component {
                 confirmPassword: ''
             });
         } catch(error) {
-            console.error(error);
+            const errorString = error.toString() 
+            const alertMessage = errorString.substring(15, errorString.indexOf(".") + 1)
+            console.error(alertMessage)
+            alert(alertMessage)
         }
     }
 
@@ -61,7 +65,7 @@ class SignUp extends React.Component {
                     <FormInput type='email' name='email' value={email} onChange={this.handleChange} label='Email' required />
                     <FormInput type='password' name='password' value={password} onChange={this.handleChange} label='Password' required />
                     <FormInput type='password' name='confirmPassword' value={confirmPassword} onChange={this.handleChange} label='Confirm password' required />
-                    <CustomButton type="submit" onClick={this.handleSubmit} >SIGN UP</CustomButton>
+                    <CustomButton type="submit" onClick={this.handleSubmit}>SIGN UP</CustomButton>
                 </form>
             </div>
         )
