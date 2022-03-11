@@ -6,7 +6,7 @@ npm install firebase react-dom react-router-dom redux-logger redux-persist redux
 npm start
 
 ## Project Description
-crwn-clothing is a fully functional e-commerce website that allows users to purchase a variety of clothing items. 
+CRWN Clothing is a fully functional e-commerce website that allows users to purchase a variety of clothing items. 
 
 #### Features:
 - Users can add items to a cart that updates in realtime
