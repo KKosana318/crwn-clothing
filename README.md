@@ -1,3 +1,5 @@
+* This project is an old version. To see the updated project, go to https://github.com/KKosana318/crwn-clothing-2 *
+
 ## Getting started
 To get started, run the following commands in the terminal of the project directory:
 
